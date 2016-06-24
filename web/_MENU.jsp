@@ -5,5 +5,5 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-Lien1
-Lien2
+<a href="connexion">Connexion</a>
+<a href="ajoutquizz">Ajouter quizz</a>
