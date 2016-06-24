@@ -21,7 +21,14 @@
         <div class="contenu">     
             <form method="post">
                 Nom : <input type="text" name="nom"><br>
-                Nombre de questions (min 3) : <input type="number" name="nb" min="3"><br>
+                Nombre de questions (min 3) : <input type="number" name="nb" min="1"><br>
+                
+                Question 1 : <input type="text" name="q1"><br>
+                rep 1 : <input type="text" name="r1"><br>
+                rep 2 : <input type="text" name="r2"><br>
+                rep 3 : <input type="text" name="r3"><br>
+                
+                
                 <input type="submit" value="Continuer">
             </form>
         </div>
