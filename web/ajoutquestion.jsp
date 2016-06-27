@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ajoutquizz
-    Created on : 24 juin 2016, 15:11:14
+    Document   : ajoutquestion
+    Created on : 27 juin 2016, 10:45:35
     Author     : admin
 --%>
 
@@ -20,8 +20,13 @@
         </div>
         <div class="contenu">     
             <form method="post">
-                Nom : <input type="text" name="nom"><br>
-                Nombre de questions (min 3) : <input type="number" name="nb" min="1"><br>                
+                Question 1 : <input type="text" name="q1"><br>
+                rep 1 : <input type="text" name="r1"><br>
+                rep 2 : <input type="text" name="r2"><br>
+                rep 3 : <input type="text" name="r3"><br>
+                rep 4 : <input type="text" name="r4"><br>
+                Numéro de la bonne réponse : <input type="number" name="nrep" min="1" max="4"><br>                
+                
                 <input type="submit" value="Continuer">
             </form>
         </div>

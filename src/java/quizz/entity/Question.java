@@ -34,7 +34,7 @@ public class Question implements Serializable {
     private int numRep;
     
     @ManyToOne
-    @JoinColumn(name="quizz")
+    @JoinColumn(name="quizz_id")
     private Quizz lquizz;
 
     public Long getId() {

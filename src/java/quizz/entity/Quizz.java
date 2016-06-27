@@ -26,7 +26,7 @@ public class Quizz implements Serializable {
     private Long id;
     private String nom;
     
-    @OneToMany
+    @OneToMany(mappedBy = "lquizz")
     private List<Question> lquestions;
     
     
