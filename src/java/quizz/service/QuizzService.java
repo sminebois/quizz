@@ -20,4 +20,8 @@ public class QuizzService {
     public void modifierQuizz(Quizz qu){
         new QuizzDAO().modifierQuestion(qu);
     }
+    
+    public Quizz getQuizzById(long id){
+        return new QuizzDAO().getQuizzById(id);
+    }
 }

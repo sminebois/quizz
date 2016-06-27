@@ -37,7 +37,9 @@ public class AjoutquizzServlet extends HttpServlet {
         Quizz qu = new Quizz(req.getParameter("nom"));
         new QuizzService().enregisterQuizz(qu);
         
-        req.setAttribute("nouv_quizz", qu);
+        req.setAttribute("id_quizz", qu.getId());
+        req.setAttribute("objquizz", qu);
+        
         
         resp.sendRedirect("ajoutquestion");
     }

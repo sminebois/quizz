@@ -33,9 +33,10 @@ public class AjoutquestionServlet extends HttpServlet {
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Quizz qu = (Quizz) req.getAttribute("nouv_quizz");
+        Quizz q = (Quizz) req.getAttribute("nouv_quizz");
         
-        List<Question> lquestion = new ArrayList<Question>();
+        Quizz qu = new QuizzService().getQuizzById((long) (req.getAttribute("id_quizz")));
+        List<Question> lquestion = new ArrayList<>();
         
         Question q1 = new Question(req.getParameter("q1"), 0, req.getParameter("r1"), req.getParameter("r2"), req.getParameter("r3"), req.getParameter("r4"), Integer.parseInt(req.getParameter("nrep")), qu);
         

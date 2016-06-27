@@ -27,4 +27,9 @@ public class QuizzDAO {
         em.merge(qu);
         em.getTransaction().commit();
     }
+    
+    public Quizz getQuizzById(long id){
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        return em.find(Quizz.class, id);
+    }
 }
