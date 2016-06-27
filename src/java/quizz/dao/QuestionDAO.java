@@ -27,4 +27,9 @@ public class QuestionDAO {
         em.merge(q);
         em.getTransaction().commit();
     }
+    
+    public int getOrdreDerniereQuestionByQuizz(long idquizz){
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        return em.createQuery("SELECT q FROM Question q WHERE q.id:=idq ORDER BY q.ordre DES").setParameter("idq", idquizz).getFirstResult();
+    }
 }

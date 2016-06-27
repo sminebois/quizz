@@ -5,6 +5,7 @@
  */
 package quizz.service;
 
+import java.util.List;
 import quizz.dao.QuizzDAO;
 import quizz.entity.Quizz;
 
@@ -23,5 +24,9 @@ public class QuizzService {
     
     public Quizz getQuizzById(long id){
         return new QuizzDAO().getQuizzById(id);
+    }
+    
+    public List<Quizz> getListeQuizz(){
+        return new QuizzDAO().getListeQuizz();
     }
 }

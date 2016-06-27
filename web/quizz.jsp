@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ajoutquizz
-    Created on : 24 juin 2016, 15:11:14
+    Document   : quizz
+    Created on : 27 juin 2016, 13:16:21
     Author     : admin
 --%>
 
@@ -19,11 +19,18 @@
             <c:import url="_MENU.jsp"/>
         </div>
         <div class="contenu">     
-            <form method="post">
-                Nom : <input type="text" name="nom"><br>
-                Nombre de questions (min 3) : <input type="number" name="nb" min="3"><br>                
-                <input type="submit" value="Continuer">
-            </form>
+            <h1>Les Quizz qui dépotent !</h1>
+            <table>
+                <tr>
+                    <th>Nom</th>                    
+                </tr>
+                <c:forEach items="${lquizz}" var="q">
+                    <tr>
+                        <td>${q.nom}</td>
+                    </tr>
+
+                </c:forEach>
+            </table>
         </div>
         <div class="pied">
             <c:import url="_PIED.jsp"/>

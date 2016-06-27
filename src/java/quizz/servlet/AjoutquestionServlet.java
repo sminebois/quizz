@@ -27,15 +27,22 @@ import quizz.service.QuizzService;
 public class AjoutquestionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("nquestion", req.getSession().getAttribute("nb"));
+        List<Quizz> lquizz = new QuizzService().getListeQuizz();
+        req.setAttribute("lquizz", lquizz);
         
         req.getRequestDispatcher("ajoutquestion.jsp").forward(req, resp);
     }
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Quizz q = (Quizz) req.getAttribute("nouv_quizz");
         
-        Quizz qu = new QuizzService().getQuizzById((long) (req.getAttribute("id_quizz")));
+        Quizz qu = (Quizz) req.getSession().getAttribute("quizzz");
+        
+        if(qu == null){
+            qu = new QuizzService().getQuizzById(Long.parseLong(req.getParameter("quizzSel")));
+        }
+        
         List<Question> lquestion = new ArrayList<>();
         
         Question q1 = new Question(req.getParameter("q1"), 0, req.getParameter("r1"), req.getParameter("r2"), req.getParameter("r3"), req.getParameter("r4"), Integer.parseInt(req.getParameter("nrep")), qu);

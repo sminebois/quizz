@@ -20,7 +20,12 @@
         </div>
         <div class="contenu">     
             <form method="post">
-                Question 1 : <input type="text" name="q1"><br>
+                <select name="quizzSel">
+                    <c:forEach items="${lquizz}" var="q">
+                        <option value="${q.id}">${q.nom}</option>
+                    </c:forEach>
+                </select>
+                Question : <input type="text" name="q1"><br>
                 rep 1 : <input type="text" name="r1"><br>
                 rep 2 : <input type="text" name="r2"><br>
                 rep 3 : <input type="text" name="r3"><br>
