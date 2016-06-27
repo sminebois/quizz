@@ -5,10 +5,15 @@
  */
 package quizz.service;
 
+import quizz.dao.QuizzDAO;
+import quizz.entity.Quizz;
+
 /**
  *
  * @author admin
  */
 public class QuizzService {
-    
+    public void enregisterQuizz(Quizz qu){
+        new QuizzDAO().ajouterQuestion(qu);
+    }
 }

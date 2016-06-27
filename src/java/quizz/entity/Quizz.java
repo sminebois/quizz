@@ -54,6 +54,18 @@ public class Quizz implements Serializable {
         this.lquestions = lquestions;
     }
 
+    public Quizz() {
+    }
+
+    public Quizz(String nom, List<Question> lquestions) {
+        this.nom = nom;
+        this.lquestions = lquestions;
+    }
+
+    public Quizz(String nom) {
+        this.nom = nom;
+    }
+
     
     
     @Override

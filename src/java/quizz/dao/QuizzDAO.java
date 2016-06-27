@@ -5,10 +5,19 @@
  */
 package quizz.dao;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import quizz.entity.Quizz;
+
 /**
  *
  * @author admin
  */
 public class QuizzDAO {
-    
+    public void ajouterQuestion(Quizz qu){
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        em.getTransaction().begin();
+        em.persist(qu);
+        em.getTransaction().commit();
+    }
 }

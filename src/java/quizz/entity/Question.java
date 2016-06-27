@@ -109,6 +109,30 @@ public class Question implements Serializable {
         this.lquizz = lquizz;
     }
 
+    public Question() {
+    }
+
+    public Question(String titre, int ordre, String rep1, String rep2, String rep3, String rep4, int numRep) {
+        this.titre = titre;
+        this.ordre = ordre;
+        this.rep1 = rep1;
+        this.rep2 = rep2;
+        this.rep3 = rep3;
+        this.rep4 = rep4;
+        this.numRep = numRep;
+    }
+
+    public Question(String titre, int ordre, String rep1, String rep2, String rep3, String rep4, int numRep, Quizz lquizz) {
+        this.titre = titre;
+        this.ordre = ordre;
+        this.rep1 = rep1;
+        this.rep2 = rep2;
+        this.rep3 = rep3;
+        this.rep4 = rep4;
+        this.numRep = numRep;
+        this.lquizz = lquizz;
+    }
+
     
     
     @Override

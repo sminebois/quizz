@@ -27,6 +27,8 @@
                 rep 1 : <input type="text" name="r1"><br>
                 rep 2 : <input type="text" name="r2"><br>
                 rep 3 : <input type="text" name="r3"><br>
+                rep 4 : <input type="text" name="r4"><br>
+                Numéro de la bonne réponse : <input type="number" name="nrep" min="1" max="4"><br>
                 
                 
                 <input type="submit" value="Continuer">
