@@ -16,4 +16,8 @@ public class QuestionService {
     public void enregistrerQuestion(Question qu){
         new QuestionDAO().ajouterQuestion(qu);
     }
+    
+    public void modifierQuestion(Question qu){
+        new QuestionDAO().modifierQuestion(qu);
+    }
 }

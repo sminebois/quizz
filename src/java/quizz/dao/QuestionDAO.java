@@ -20,4 +20,11 @@ public class QuestionDAO {
         em.persist(ques);
         em.getTransaction().commit();
     }
+    
+    public void modifierQuestion(Question q){
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        em.getTransaction().begin();
+        em.merge(q);
+        em.getTransaction().commit();
+    }
 }

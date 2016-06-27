@@ -16,4 +16,8 @@ public class QuizzService {
     public void enregisterQuizz(Quizz qu){
         new QuizzDAO().ajouterQuestion(qu);
     }
+    
+    public void modifierQuizz(Quizz qu){
+        new QuizzDAO().modifierQuestion(qu);
+    }
 }
