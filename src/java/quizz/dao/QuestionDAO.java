@@ -5,6 +5,7 @@
  */
 package quizz.dao;
 
+import java.util.Collections;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -32,10 +33,19 @@ public class QuestionDAO {
     public int getOrdreDerniereQuestionByQuizz(long idquizz){
         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
         
-        List<Question> lq = em.createQuery("SELECT q FROM Question q WHERE q.lquizz.id=:idq ORDER BY q.ordre DESC").setParameter("idq", idquizz).getResultList();
+        List<Question> lq = getListQuestionByQuizzId(idquizz);        
         if(lq.isEmpty()){
             return 0;
+        }else{
+            Collections.reverse(lq);
+            return lq.get(0).getOrdre();
         }
-        return lq.get(0).getOrdre();
+        
+    }
+    
+    public List<Question> getListQuestionByQuizzId(long idQuizz){
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        return em.createQuery("SELECT q FROM Question q WHERE q.lquizz.id=:idq ORDER BY q.ordre ASC").setParameter("idq", idQuizz).getResultList();
+        
     }
 }

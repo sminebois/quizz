@@ -26,7 +26,7 @@
                 </tr>
                 <c:forEach items="${lquizz}" var="q">
                     <tr>
-                        <td>${q.nom}</td>
+                        <td><a href="quizz_details?id=${q.id}">${q.nom}</a> </td>
                     </tr>
 
                 </c:forEach>
