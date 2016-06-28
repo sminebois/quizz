@@ -45,7 +45,9 @@ public class AjoutquestionServlet extends HttpServlet {
         
         List<Question> lquestion = new ArrayList<>();
         
-        Question q1 = new Question(req.getParameter("q1"), 0, req.getParameter("r1"), req.getParameter("r2"), req.getParameter("r3"), req.getParameter("r4"), Integer.parseInt(req.getParameter("nrep")), qu);
+        Question q1 = new Question(req.getParameter("q1"), new QuestionService().getOrdreDerniereQuestionByQuizz(qu.getId()) + 1, req.getParameter("r1"), req.getParameter("r2"), req.getParameter("r3"), req.getParameter("r4"), Integer.parseInt(req.getParameter("nrep")), qu);
+        
+        
         
         lquestion.add(q1);
         qu.setLquestions(lquestion);

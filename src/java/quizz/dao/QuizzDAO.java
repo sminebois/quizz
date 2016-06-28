@@ -38,4 +38,5 @@ public class QuizzDAO {
         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
         return em.createQuery("SELECT q FROM Quizz q").getResultList();
     }
+    
 }

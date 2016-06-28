@@ -20,4 +20,8 @@ public class QuestionService {
     public void modifierQuestion(Question qu){
         new QuestionDAO().modifierQuestion(qu);
     }
+    
+    public int getOrdreDerniereQuestionByQuizz(long idquizz){
+        return new QuestionDAO().getOrdreDerniereQuestionByQuizz(idquizz);
+    }
 }
