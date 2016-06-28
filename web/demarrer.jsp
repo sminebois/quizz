@@ -1,9 +1,8 @@
 <%-- 
-    Document   : quizz
-    Created on : 27 juin 2016, 13:16:21
+    Document   : demarrer
+    Created on : 28 juin 2016, 12:03:03
     Author     : admin
 --%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,18 +18,14 @@
             <c:import url="_MENU.jsp"/>
         </div>
         <div class="contenu">     
-            <h1>Les Quizz qui dépotent !</h1>
-            <table>
-                <tr>
-                    <th>Nom</th>                    
-                </tr>
-                <c:forEach items="${lquizz}" var="q">
-                    <tr>
-                        <td><a href="demarrer?id=${q.id}">${q.nom}</a> </td>
-                    </tr>
-
-                </c:forEach>
-            </table>
+            <h3>Quizz : ${quizz.nom}</h3>
+            Question ${numQuestion + 1}/${nbQuestion}<br>
+            ${lquestions[numQuestion].titre}
+            
+            <form method="post">
+                <input type="submit" value="Question suivante">
+            </form>
+            
         </div>
         <div class="pied">
             <c:import url="_PIED.jsp"/>

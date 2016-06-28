@@ -45,7 +45,8 @@ public class QuestionDAO {
     
     public List<Question> getListQuestionByQuizzId(long idQuizz){
         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-        return em.createQuery("SELECT q FROM Question q WHERE q.lquizz.id=:idq ORDER BY q.ordre ASC").setParameter("idq", idQuizz).getResultList();
-        
+        return em.createQuery("SELECT q FROM Question q WHERE q.lquizz.id=:idq ORDER BY q.ordre ASC").setParameter("idq", idQuizz).getResultList();        
     }
+    
+    
 }

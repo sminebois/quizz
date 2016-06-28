@@ -1,6 +1,6 @@
 <%-- 
-    Document   : quizz
-    Created on : 27 juin 2016, 13:16:21
+    Document   : question_suivante
+    Created on : 28 juin 2016, 12:14:12
     Author     : admin
 --%>
 
@@ -19,18 +19,7 @@
             <c:import url="_MENU.jsp"/>
         </div>
         <div class="contenu">     
-            <h1>Les Quizz qui dépotent !</h1>
-            <table>
-                <tr>
-                    <th>Nom</th>                    
-                </tr>
-                <c:forEach items="${lquizz}" var="q">
-                    <tr>
-                        <td><a href="demarrer?id=${q.id}">${q.nom}</a> </td>
-                    </tr>
-
-                </c:forEach>
-            </table>
+            
         </div>
         <div class="pied">
             <c:import url="_PIED.jsp"/>

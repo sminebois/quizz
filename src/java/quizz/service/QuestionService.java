@@ -5,6 +5,7 @@
  */
 package quizz.service;
 
+import java.util.List;
 import quizz.dao.QuestionDAO;
 import quizz.entity.Question;
 
@@ -23,5 +24,9 @@ public class QuestionService {
     
     public int getOrdreDerniereQuestionByQuizz(long idquizz){
         return new QuestionDAO().getOrdreDerniereQuestionByQuizz(idquizz);
+    }
+    
+    public List<Question> getListQuestionByQuizzId(long idquizz){
+        return new QuestionDAO().getListQuestionByQuizzId(idquizz);
     }
 }
