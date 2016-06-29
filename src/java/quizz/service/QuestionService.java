@@ -29,4 +29,8 @@ public class QuestionService {
     public List<Question> getListQuestionByQuizzId(long idquizz){
         return new QuestionDAO().getListQuestionByQuizzId(idquizz);
     }
+    
+    public Question getQuestionByID(long id){
+        return new QuestionDAO().getQuestionByID(id);
+    }
 }

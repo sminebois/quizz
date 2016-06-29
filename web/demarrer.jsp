@@ -19,12 +19,18 @@
         </div>
         <div class="contenu">     
             <h3>Quizz : ${quizz.nom}</h3>
-            Question ${numQuestion + 1}/${nbQuestion}<br>
-            ${lquestions[numQuestion].titre}
-            
+            Question ${numQuestion + 1}/${nbQuestion + 1}<br>
+            <h5>${lquestions[numQuestion].titre}<br></h5>
+            <br>
             <form method="post">
+                <input type="radio" name="choix" value="1">${lquestions[numQuestion].rep1}<br>
+                <input type="radio" name="choix" value="2">${lquestions[numQuestion].rep2}<br>
+                <input type="radio" name="choix" value="3">${lquestions[numQuestion].rep3}<br>
+                <input type="radio" name="choix" value="4">${lquestions[numQuestion].rep4}<br>
+                <input type="hidden" name="idqu" value="${lquestions[numQuestion].id}">
+
                 <input type="submit" value="Question suivante">
-            </form>
+            </form>                     
             
         </div>
         <div class="pied">

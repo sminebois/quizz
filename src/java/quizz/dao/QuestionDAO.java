@@ -48,5 +48,10 @@ public class QuestionDAO {
         return em.createQuery("SELECT q FROM Question q WHERE q.lquizz.id=:idq ORDER BY q.ordre ASC").setParameter("idq", idQuizz).getResultList();        
     }
     
+    public Question getQuestionByID(long id){
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        return em.find(Question.class, id);
+    }
+    
     
 }
