@@ -74,7 +74,6 @@ public class DemarrerServlet extends HttpServlet {
         //redirection si il ne reste plus de question, sinon rappel de la page
         if(req.getSession().getAttribute("numQuestion") == req.getSession().getAttribute("nbQuestion")){
             req.getSession().removeAttribute("numQuestion");
-            //req.getSession().removeAttribute("nbQuestion");
             req.getSession().removeAttribute("id");
             resp.sendRedirect("score");
         }else{       

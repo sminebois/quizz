@@ -23,7 +23,7 @@
             <h5>${lquestions[numQuestion].titre}<br></h5>
             <br>
             <form method="post">
-                <input type="radio" name="choix" value="1">${lquestions[numQuestion].rep1}<br>
+                <input type="radio" name="choix" value="1" checked="">${lquestions[numQuestion].rep1}<br>
                 <input type="radio" name="choix" value="2">${lquestions[numQuestion].rep2}<br>
                 <input type="radio" name="choix" value="3">${lquestions[numQuestion].rep3}<br>
                 <input type="radio" name="choix" value="4">${lquestions[numQuestion].rep4}<br>

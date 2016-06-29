@@ -21,7 +21,7 @@
         <div class="contenu">     
             <h2>Score</h2>
             Vous avez ${scoretotal} points !<br>
-            ${scoretotal}/${nbQuestion + 1}
+            ${scoretotal}/${nbQuestion + 1} bonnes réponses.
         </div>
         <div class="pied">
             <c:import url="_PIED.jsp"/>
